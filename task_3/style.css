@@ -156,3 +156,107 @@ body{
 
 /* 3rd Page */
 
+.third-page{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#0055A5;
+
+    padding:80px 120px;
+}
+
+.left-section{
+    width:35%;
+    color:white;
+}
+
+.why-us{
+    font-size:24px;
+    margin-bottom:80px;
+}
+
+.menu h2{
+    font-size:42px;
+    margin-bottom:25px;
+    border-bottom:1px solid rgba(255,255,255,.4);
+    padding-bottom:15px;
+}
+
+.menu p{
+    font-size:36px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.3);
+    cursor:pointer;
+}
+
+.menu p:hover{
+    color:#FFD24D;
+}
+
+.right-section{
+    width:42%;
+}
+
+.bottom-card{
+    background:white;
+    padding:35px;
+}
+
+.bottom-card img{
+    width:100%;
+    height:auto;
+}
+
+/* 4th Page */
+
+.research{
+    width:100%;
+    padding:70px 60px;
+    background:white;
+}
+
+.research-heading{
+    font-size:28px;
+    font-weight:600;
+    color:black;
+    margin-bottom:15px;
+}
+
+.research-title{
+    font-size:60px;
+    color:#0055A5;
+    margin-bottom:30px;
+}
+
+.research-description{
+    width:85%;
+    font-size:22px;
+    line-height:1.8;
+    color:#333;
+    margin-bottom:50px;
+}
+
+.research-cards{
+    display:flex;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.research-card{
+    flex:1;
+}
+
+.research-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.research-card p{
+    margin-top:18px;
+    font-size:28px;
+    color:#111;
+}
+
+
