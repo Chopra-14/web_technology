@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:white;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    width:220px;
+    height:auto;
+}
+
+.naac{
+    width:100px;
+    height:auto;
+}
+
+.divider{
+    width:1px;
+    height:50px;
+    background:#d9a44f;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#004b9b;
+    font-size:18px;
+    font-weight:500;
+}
+
+.admission-btn{
+    background:#004b9b;
+    color:white !important;
+    padding:12px 18px;
+}
+
+.icons{
+    display:flex;
+    gap:20px;
+}
+
+.icon{
+    width:24px;
+    height:24px;
+    cursor:pointer;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    gap: 40px;
+}
+
+.text-section{
+    width: 45%;
+}
+
+.video-section{
+    width: 55%;
+}
+
+.chancellor-message{
+    width: 100%;
+    height: auto;
+}
+
+.video{
+    width: 100%;
+    height: auto;
+}
+
+/* 2nd page*/
+
+/* =================== 2nd Page =================== */
+
+.achievements{
+    width:100%;
+    padding:60px 80px;
+    background:#f7f7f7;
+}
+
+.achieve{
+    width:100%;
+}
+
+/* 2nd Page  */
+.banner{
+    display:block;
+    width:70%;
+    margin:0 auto 40px auto;
+}
+
+
+.ranking{
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    gap:20px;
+    width:100%;
+}
+
+
+.nirf{
+    width:30%;
+    height:260px;
+    object-fit:cover;
+    background:#fff;
+    border:1px solid #f0f0f0;
+}
+
+
+.nba{
+    width:30%;
+    height:260px;
+    object-fit:cover;
+    background:#fff;
+    border:1px solid #f0f0f0;
+}
+
+
+.achievement{
+    width:40%;
+    height:260px;
+    object-fit:cover;
+    background:#fff;
+    border:1px solid #f0f0f0;
+}
+
+
+
+/* 3rd Page */
+
