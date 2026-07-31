@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form class="form" action="submit.php" method="POST" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend class="title">Registration Form</legend>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="middle-name">Middle Name:</label>
+        <input type="text" id="middle-name" name="middle-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="date-of-birth">Date of Birth:</label>
+        <input type="date" id="date-of-birth" name="date-of-birth" required>
+
+        <label>Gender:</label>
+
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+        </div>
+
+        <label for="country">Country:</label>
+
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>UK</option>
+            <option>Australia</option>
+        </select>
+
+        <label for="state">State:</label>
+
+        <select id="state" name="state" required>
+            <option value="">Select State</option>
+            <option>Andhra Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Karnataka</option>
+            <option>Tamil Nadu</option>
+            <option>Delhi</option>
+            <option>Gujarat</option>
+        </select>
+
+        <label for="pin-code">Pin Code:</label>
+        <input type="text" id="pin-code" name="pin-code">
+
+        <label for="phone-number">Phone Number:</label>
+        <input type="tel" id="phone-number" name="phone-number">
+
+        <div class="file-upload">
+
+            <label for="upload-resume">Upload Resume:</label>
+            <input type="file" id="upload-resume" name="upload-resume">
+
+            <label for="upload-profile-photo">Upload Profile Photo:</label>
+            <input type="file" id="upload-profile-photo" name="upload-profile-photo">
+
+        </div>
+
+        <label for="message">Description:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <label>Disability:</label>
+
+        <div class="radio-group">
+
+            <input type="radio" id="yes" name="disability" value="Yes" onclick="showTextbox()">
+            <label for="yes">Yes</label>
+
+            <input type="radio" id="no" name="disability" value="No" onclick="hideTextbox()">
+            <label for="no">No</label>
+
+        </div>
+
+        <div id="disability-details">
+            <label for="disability-type">Specify Disability</label>
+            <input type="text" id="disability-type" name="disability-type">
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+
+        <legend class="title">Education Details</legend>
+
+        <label for="college-name">College Name:</label>
+
+        <select id="college-name" name="college-name">
+            <option>Select College</option>
+            <option>AEC</option>
+            <option>ACET</option>
+            <option>ACOE</option>
+        </select>
+
+        <label for="department">Department:</label>
+
+        <select id="department" name="department">
+            <option>Select Department</option>
+            <option>AIML</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>DS</option>
+            <option>MECH</option>
+        </select>
+
+        <label for="year-of-graduation">Year of Graduation:</label>
+        <input type="number" id="year-of-graduation" name="year-of-graduation">
+
+        <label for="cgpa">CGPA:</label>
+        <input type="number" id="cgpa" name="cgpa" step="0.01">
+
+    </fieldset>
+
+    <button class="submit-btn" type="submit">
+        Submit
+    </button>
+
+</form>
+
+<script>
+
+function showTextbox(){
+    document.getElementById("disability-details").style.display="block";
+}
+
+function hideTextbox(){
+    document.getElementById("disability-details").style.display="none";
+    document.getElementById("disability-type").value="";
+}
+
+</script>
+
+</body>
+</html>
