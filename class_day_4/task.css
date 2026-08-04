@@ -1,0 +1,87 @@
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+
+body{
+    margin:0;
+    height:600px;
+}
+
+section{
+    height:100%;
+}
+
+.row{
+    display:flex;
+    flex-direction:row;
+}
+
+.col{
+    display:flex;
+    flex-direction:column;
+}
+
+.h-50{
+    height:300px;
+}
+
+.h-33{
+    height:200px;
+}
+
+.h-34{
+    height:200px;
+}
+
+.bg-brown{
+    background:brown;
+}
+
+.bg-yellow{
+    background:yellow;
+}
+
+.bg-blue{
+    background:blue;
+}
+
+.bg-peach{
+    background:peachpuff;
+}
+
+.bg-purple{
+    background:purple;
+}
+
+.bg-green{
+    background:green;
+}
+
+.bg-red{
+    background:red;
+}
+
+.bg-black{
+    background:black;
+}
+
+.bg-dark-blue{
+    background:darkblue;
+}
+
+.bg-violet{
+    background:violet;
+}
+
+.bg-cyan{
+    background:cyan;
+}
