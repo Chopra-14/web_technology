@@ -41,14 +41,14 @@
             }
 
             if (password == confirmpassword) {
-                /* getData.push(data)  
+                getData.push(data)  
                 localStorage.setItem("userData",JSON.stringify(getData))
                 document.getElementById("output").innerHTML =
                     `<p>firstname : ${firstname}</p>
             <p>lastname : ${lastname}</p>
             <p>email : ${email}</p>
             <p>password : ${password}</p>`
-            } */
+
              const count=localStorage.length+1;
              localStorage.setItem(`userData${count}`,JSON.stringify(data))
             }
