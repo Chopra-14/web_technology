@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Bill Gates Bhavan - Department List
+{% endblock %}
+
+{% block content %}
+
+  <h1>Bill Gates Bhavan</h1>
+
+  <ul>
+    {% for x in bgbbhavan %}
+      <li>
+        <a href="/bgbbhavan/details/{{ x.id }}">
+          {{ x.department_name }} - {{ x.no_of_students }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

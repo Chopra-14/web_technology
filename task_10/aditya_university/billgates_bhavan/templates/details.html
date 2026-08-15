@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ bgbbhavan.department_name }}
+{% endblock %}
+
+{% block content %}
+
+  <h1>{{ bgbbhavan.department_name }} - {{ bgbbhavan.no_of_students }}</h1>
+
+  <p>Section: {{ bgbbhavan.section }}</p>
+  <p>Year: {{ bgbbhavan.year }}</p>
+
+  <p>
+    Back to <a href="/billgates_bhavan/">Bill Gates Bhavan</a>
+  </p>
+
+{% endblock %}
