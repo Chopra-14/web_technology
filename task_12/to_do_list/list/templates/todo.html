@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>To Do List</title>
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+
+
+        h1 {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        /* ADD / UPDATE SECTION */
+
+        .add-section {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .add-section input {
+
+            width: 300px;
+
+            padding: 10px;
+
+            font-size: 16px;
+
+        }
+
+
+        .add-section button {
+
+            padding: 10px 20px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* TASK */
+
+        .task {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .task-name {
+
+            width: 200px;
+
+            font-size: 18px;
+
+        }
+
+
+        /* BUTTONS */
+
+        .task a {
+
+            padding: 7px 15px;
+
+            border: 1px solid black;
+
+            text-decoration: none;
+
+            color: black;
+
+        }
+
+
+        .task a:hover {
+
+            background-color: #eeeeee;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <h1>TO DO LIST</h1>
+
+
+    <!-- ========================= -->
+    <!-- ADD / UPDATE FORM -->
+    <!-- ========================= -->
+
+    <form
+        method="POST"
+        class="add-section"
+    >
+
+        {% csrf_token %}
+
+
+        <input
+            type="text"
+            name="title"
+            placeholder="Enter task"
+
+            {% if edit_task %}
+                value="{{ edit_task.title }}"
+            {% endif %}
+
+            required
+        >
+
+
+        {% if edit_task %}
+
+            <!-- UPDATE -->
+
+            <input
+                type="hidden"
+                name="task_id"
+                value="{{ edit_task.id }}"
+            >
+
+
+            <button type="submit">
+
+                UPDATE
+
+            </button>
+
+
+        {% else %}
+
+            <!-- ADD -->
+
+            <button type="submit">
+
+                ADD
+
+            </button>
+
+        {% endif %}
+
+
+    </form>
+
+
+
+    <!-- ========================= -->
+    <!-- TASK LIST -->
+    <!-- ========================= -->
+
+
+    {% for task in tasks %}
+
+
+        <div class="task">
+
+
+            <span>
+
+                •
+
+            </span>
+
+
+            <span class="task-name">
+
+                {{ task.title }}
+
+            </span>
+
+
+            <!-- EDIT -->
+
+            <a
+                href="?edit={{ task.id }}"
+            >
+
+                Edit
+
+            </a>
+
+
+            <!-- DELETE -->
+
+            <a
+                href="{% url 'delete_task' task.id %}"
+            >
+
+                Delete
+
+            </a>
+
+
+        </div>
+
+
+    {% empty %}
+
+
+        <p>
+
+            No tasks available.
+
+        </p>
+
+
+    {% endfor %}
+
+
+</body>
+
+</html>
