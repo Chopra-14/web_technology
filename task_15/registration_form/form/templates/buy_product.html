@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buy Product</title>
+</head>
+
+<body>
+
+    <h1>Buy Product</h1>
+
+    <p>
+        Product:
+        <strong>{{ product.name }}</strong>
+    </p>
+
+    <p>
+        Available Stock:
+        <strong>{{ product.quantity }}</strong>
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Buy
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="{% url 'user_dashboard' %}">
+        Back to Dashboard
+    </a>
+
+</body>
+
+</html>
